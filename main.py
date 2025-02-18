@@ -199,5 +199,95 @@ def check_shape(lst):
 # print(matrix)
 
 # cau 13
-A = np.array([[1,1,2],[2,4,-3],[3,6,-5]])
-print(round(np.linalg.det(A)))
+# A = np.array([[1,1,2],[2,4,-3],[3,6,-5]])
+# print(round(np.linalg.det(A)))
+
+# cau 14
+# a1=[1,-2,-5]
+# a2=[2,5,6]
+
+# matrix = np.column_stack((a1,a2))
+# print(matrix)
+
+# cau 15
+import matplotlib.pyplot as plt
+
+# y = np.arange(-5, 6, 1)
+# y_squared = y**2
+
+# plt.figure()
+# plt.plot(y, y_squared, marker='o', linestyle='-')
+# plt.xlabel('y')
+# plt.ylabel('y^2')
+# plt.title('Plot of y^2')
+# plt.grid(True)
+# plt.show()
+
+# cau 16
+# values = np.linspace(0, 32, 4)
+# print(values)
+
+# cau 17
+# x = np.linspace(-5, 5, 50)
+# y = x**2
+
+# plt.figure()
+# plt.plot(x, y, label='$y = x^2$')
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.title('Plot of y = x^2')
+# plt.grid(True)
+# plt.show()
+
+# cau 18
+# x = np.linspace(-2, 2, 100)
+# y = np.exp(x)
+
+# plt.figure()
+# plt.plot(x, y, label='$y = e^x$')
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.title('Plot of y = exp(x)')
+# plt.grid(True)
+# plt.show()
+
+# cau 19
+# x = np.linspace(0.1, 5, 100)
+# y = np.log(x)
+
+# plt.figure()
+# plt.plot(x, y, label='$y = log(x)$')
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.title('Plot of y = log(x)')
+# plt.grid(True)
+# plt.show()
+
+# cau 20
+fig, axs = plt.subplots(1, 2, figsize=(12, 5))
+x1 = np.linspace(-2, 2, 100)
+y1 = np.exp(x1)
+y2 = np.exp(2 * x1)
+
+axs[0].plot(x1, y1, label='$y = e^x$', linestyle='-')
+axs[0].plot(x1, y2, label='$y = e^{2x}$', linestyle='--')
+axs[0].set_xlabel('x')
+axs[0].set_ylabel('y')
+axs[0].set_title('Exponential Functions')
+axs[0].legend()
+axs[0].grid(True)
+
+x2 = np.linspace(0.1, 5, 100)  
+y3 = np.log(x2)
+y4 = np.log(2 * x2)
+
+axs[1].plot(x2, y3, label='$y = log(x)$', linestyle='-')
+axs[1].plot(x2, y4, label='$y = log(2x)$', linestyle='--')
+axs[1].set_xlabel('x')
+axs[1].set_ylabel('y')
+axs[1].set_title('Logarithmic Functions')
+axs[1].legend()
+axs[1].grid(True)
+
+plt.tight_layout()
+plt.show()
